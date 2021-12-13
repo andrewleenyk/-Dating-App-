@@ -1,5 +1,6 @@
-User.destroy_all
+
 Post.destroy_all
+User.destroy_all
 @john = User.create!(
     username: 'John',
     email: 'john@gmail.com',

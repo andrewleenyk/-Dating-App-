@@ -3,7 +3,7 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Home from '../src/screens/Home/Home';
 import PostsContainer from './containers/PostsContainer/PostsContainer';
-
+import PostEdit from './screens/PostEdit/PostEdit';
 function App() {
   return (
     <div className="App">

@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
-import { getAllPosts} from '../../services/posts';
+import { getAllPosts, postPost, putPost, deletePost} from '../../services/posts';
 import Posts from '../../screens/Posts/Posts'
+import PostDetail from '../../screens/PostDetail/PostDetail';
+import PostCreate from '../../screens/PostCreate/PostCreate';
+import PostEdit from '../../screens/PostEdit/PostEdit';
+
 
 
 function PostsContainer() {
-    console.log('hj')
     const [allPosts, setAllPosts] = useState([]);
     const history = useHistory();
 
@@ -14,11 +17,10 @@ function PostsContainer() {
     }, [])
 
     const fetchPosts = async () => {
-    console.log('hj')
     const posts = await getAllPosts();
     setAllPosts(posts);
     } 
-    /*
+    //sdsaf
     const createPost = async (postData) => {
     const newPost = await postPost(postData);
     setAllPosts(prevState => ([
@@ -41,13 +43,28 @@ function PostsContainer() {
     setAllPosts(prevState => prevState.filter(post => post.id !== id));
     history.push('/posts');
     }
-    */
-   console.log('hello')
-   console.log(allPosts)
+    
 
     return (
     <>
         <Switch>
+        <Route path='/posts/new'>
+        <PostCreate
+            createPost={createPost}
+        />
+        </Route>
+        <Route path='/posts/:id/edit'>
+        <PostEdit
+            updatePost={updatePost}
+            allPosts={allPosts}
+        /> 
+        </Route>
+        <Route path='/posts/:id'>
+        <PostDetail
+            allPosts={allPosts}
+            removePost={removePost}
+        />
+        </Route>
         <Route path='/posts'>
             <Posts
             allPosts={allPosts}
