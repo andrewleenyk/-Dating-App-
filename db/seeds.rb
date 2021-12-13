@@ -6,8 +6,13 @@ Post.destroy_all
     password: '123456'
 )
 
-@testpost = Post.create!(
-    title: 'First',
-    body: 'post',
+@testpost1 = Post.create!(
+    title: 'WEB3',
+    body: 'It is a cool concept.',
+    user: @john
+)
+@testpost2 = Post.create!(
+    title: 'WEB2',
+    body: 'It is soo old.',
     user: @john
 )
