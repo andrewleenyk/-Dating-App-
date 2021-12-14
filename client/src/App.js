@@ -12,6 +12,7 @@ import {
 } from './services/auth';
 import Layout from './Layouts/Layout';
 import Register from './screens/Register';
+import modern from './modern-min-design.png';
 
 function App() {
 
@@ -44,7 +45,7 @@ function App() {
     removeToken();
   };
   return (
-    <div className='App'>
+    <div className='App' >
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
           <Route path='/login'>

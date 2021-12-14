@@ -15,6 +15,11 @@
 
     font-size: 7rem;
     margin: 0px 0px 0px 30px;
+    color: white;
+
+    font-family: 'quartzo-cufonfonts';
+    src: url('../Layouts/quartzo-cufonfonts/QUARTZO-regular.ttf');
+    
 }
 ul, li {
     list-style: none outside none;
@@ -30,14 +35,14 @@ ul, li {
 .nav-menu > li {
     display: inline;
     float:left;			
-    border-right:10px solid rgb(255, 255, 255);
+    border-right:10px solid rgba(255, 255, 255, 0);
     position: relative;
 }
 .nav-menu > li:last-child {
     border-right: none;
 }
 .nav-menu li a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     display: block;
     text-decoration: none;
     font-family: 'Roboto Condensed', sans-serif;	 
@@ -96,9 +101,9 @@ ul, li {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
     padding: 15px 30px 15px 31px;	
-    color: rgb(255, 255, 255);	 
+    color: rgb(0, 0, 0);	 
     pointer-events: none;   
     box-sizing: border-box;
 }
@@ -106,10 +111,10 @@ ul, li {
 .nav-menu li .active .back,
 .nav-menu li a:hover .front,
 .nav-menu li a:hover .back {
-    background-color: rgb(0, 0, 0);   
+    background-color: rgb(255, 255, 255);   
     background-size: 5px 5px;
     background-position: 0 0, 30px 30px; 
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     
 }
 .nav-menu ul {
@@ -127,4 +132,8 @@ ul, li {
 .nav-menu > li:hover ul {
     display: block;  
     transform: rotateX(0deg);
+}
+
+.drop-menu {
+    width: 10px;
 }

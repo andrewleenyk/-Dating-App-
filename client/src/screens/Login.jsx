@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import './Login.css';
 export default function Login(props) {
 const [formData, setFormData] = useState({
     username: '',
@@ -17,32 +17,45 @@ const handleChange = (e) => {
 };
 
 return (
-    <form onSubmit={(e)=> {
-    e.preventDefault();
-    handleLogin(formData);
-    }}>
-    <h3>Login</h3>
-    <label>
-        Username:
-        <input
-        type='text'
-        name='username'
-        value={username}
-        onChange={handleChange}
-        />
-    </label>
-    <br />
-    <label>
-        Password:
-        <input
-        type='password'
-        name='password'
-        value={password}
-        onChange={handleChange}
-        />
-    </label>
-    <br />
-    <button>Submit</button>
-    </form>
+    <div className="login-box">
+            <h2>Login</h2>
+        <form >
+        <div class="user-box">
+
+            <input
+            type='text'
+            name='username'
+            value={username}
+            onChange={handleChange}
+            />
+                    <label>
+            Username:
+        </label>
+        <br />
+
+            <input
+            type='password'
+            name='password'
+            value={password}
+            onChange={handleChange}
+            />
+                    <label>
+            Password:
+        </label>
+        </div>
+
+        <a onClick={(e)=> {
+        e.preventDefault();
+        handleLogin(formData);
+        }}>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </a>
+        </form>
+    </div>
+    
 );
 }

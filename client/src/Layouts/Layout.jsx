@@ -4,7 +4,7 @@ import './Layout.css';
 export default function Layout({ currentUser, handleLogout, children }) {
   return (
     <div className="Layout-div">
-      <h1 className="Layout-title">Tech Review</h1>
+            <h1 data-shadow='dang!' className="Layout-title">Web3 Review</h1>
 <ul class="nav-menu">
 				<li>
         <Link to='/' className="three-d">
@@ -45,7 +45,7 @@ export default function Layout({ currentUser, handleLogout, children }) {
                 <span className="back">{currentUser.username}</span>
               </span>
               </Link>
-					<ul class="clearfix unstyled drop-menu">
+					<ul className="drop-menu">
 						<li><Link to='/' className="three-d" >
 								Profile
 								<span className="three"><span className="front">Profile</span><span class="back">Profile</span></span>
@@ -83,6 +83,8 @@ export default function Layout({ currentUser, handleLogout, children }) {
         </>
         )}
         </ul>
+
+
       <br/>
       {children}
     </div>

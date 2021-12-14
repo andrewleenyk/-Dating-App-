@@ -6,8 +6,6 @@ import PostDetail from '../../screens/PostDetail';
 import PostCreate from '../../screens/PostCreate';
 import PostEdit from '../../screens/PostEdit';
 
-
-
 function MainContainer({ currentUser }) {
     const [allPosts, setAllPosts] = useState([]);
     const history = useHistory();
