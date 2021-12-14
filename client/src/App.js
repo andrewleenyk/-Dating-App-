@@ -1,16 +1,63 @@
 import React from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
-import Home from '../src/screens/Home/Home';
-import PostsContainer from './containers/PostsContainer/PostsContainer';
-import PostEdit from './screens/PostEdit/PostEdit';
+import { useState, useEffect } from 'react';
+import { Route, Switch, useHistory } from 'react-router-dom';
+import MainContainer from './containers/MainContainer/MainContainer';
+import Login from './screens/Login'
+import {
+  loginUser,
+  registerUser, 
+  verifyUser,
+  removeToken,
+} from './services/auth';
+import Layout from './Layouts/Layout';
+import Register from './screens/Register';
+
 function App() {
+
+  const [currentUser, setCurrentUser] = useState(null);
+  const history = useHistory();
+
+  useEffect(() => {
+    const handleVerify = async () => {
+      const userData = await verifyUser();
+      setCurrentUser(userData);
+    };
+    handleVerify();
+  }, []);
+
+  const handleLogin = async (formData) => {
+    const userData = await loginUser(formData);
+    setCurrentUser(userData);
+    history.push('/');
+  };
+
+  const handleRegister = async (formData) => {
+    const userData = await registerUser(formData);
+    setCurrentUser(userData);
+    history.push('/');
+  }; 
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem('authToken');
+    removeToken();
+  };
   return (
-    <div className="App">
-    <Switch>
-      <Route path='/posts' component={PostsContainer} />
-      <Route path='/' component={Home} />
-    </Switch>
+    <div className='App'>
+      <Layout currentUser={currentUser} handleLogout={handleLogout}>
+        <Switch>
+          <Route path='/login'>
+            <Login handleLogin={handleLogin} />
+          </Route>
+          <Route path='/register'>
+            <Register handleRegister={handleRegister} />
+          </Route>
+          <Route path='/'>
+            <MainContainer currentUser={currentUser}/>
+          </Route>
+        </Switch>
+      </Layout>
     </div>
   );
 }

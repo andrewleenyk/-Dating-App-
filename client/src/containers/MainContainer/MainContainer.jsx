@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
 import { getAllPosts, postPost, putPost, deletePost} from '../../services/posts';
-import Posts from '../../screens/Posts/Posts'
-import PostDetail from '../../screens/PostDetail/PostDetail';
-import PostCreate from '../../screens/PostCreate/PostCreate';
-import PostEdit from '../../screens/PostEdit/PostEdit';
+import Posts from '../../screens/Posts'
+import PostDetail from '../../screens/PostDetail';
+import PostCreate from '../../screens/PostCreate';
+import PostEdit from '../../screens/PostEdit';
 
 
 
-function PostsContainer() {
+function MainContainer({ currentUser }) {
     const [allPosts, setAllPosts] = useState([]);
     const history = useHistory();
 
@@ -20,7 +20,7 @@ function PostsContainer() {
     const posts = await getAllPosts();
     setAllPosts(posts);
     } 
-    //sdsaf
+
     const createPost = async (postData) => {
     const newPost = await postPost(postData);
     setAllPosts(prevState => ([
@@ -29,6 +29,7 @@ function PostsContainer() {
     ]));
     history.push('/posts');
     }
+
     const updatePost = async (id, postData) => {
     const updatedPost = await putPost(id, postData);
     setAllPosts(prevState => prevState.map(post => {
@@ -38,12 +39,12 @@ function PostsContainer() {
     history.push('/posts');
     }
 
+
     const removePost = async (id) => {
     await deletePost(id);
     setAllPosts(prevState => prevState.filter(post => post.id !== id));
     history.push('/posts');
     }
-    
 
     return (
     <>
@@ -57,11 +58,12 @@ function PostsContainer() {
         <PostEdit
             updatePost={updatePost}
             allPosts={allPosts}
-        /> 
+        />
         </Route>
         <Route path='/posts/:id'>
         <PostDetail
             allPosts={allPosts}
+            currentUser={currentUser}
             removePost={removePost}
         />
         </Route>
@@ -70,9 +72,12 @@ function PostsContainer() {
             allPosts={allPosts}
             />
         </Route>
+        <Route path='/'>
+          <h1>Home</h1>
+        </Route>
         </Switch>
     </>
     )
 }
 
-export default PostsContainer;
+export default MainContainer;

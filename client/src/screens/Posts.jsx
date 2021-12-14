@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Card from '../../components/Card/Card';
-import Layout from '../../Layouts/Layout';
+import Card from '../components/Card/Card';
 
-export default function Posts(props) {
-const { allPosts } = props;
+export default function Posts({ allPosts, currentUser}) {
 return (
-    <Layout>
         <div className="card-list">
             {allPosts.map(post => (
             <React.Fragment key={post.id}>
@@ -15,12 +12,12 @@ return (
                     title={post.title}
                     body={post.body}
                 />
-                </Link>
+                </Link> 
             </React.Fragment>
             ))}
+            <Link to="/posts/new"><button>create a post</button></Link>
         </div>
-        <Link to="/posts/new"><button>create a post</button></Link>
-    </Layout>
+
 
 )
 }

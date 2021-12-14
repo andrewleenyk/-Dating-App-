@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Layout from '../../Layouts/Layout';
 
-export default function PostEdit(props) {
+export default function PostEdit({ updatePost, allPosts}) {
   const [formData, setFormData] = useState({
     title: "",
     body: ""
   });
   const { title, body } = formData;
-  const { updatePost, allPosts } = props;
+
   const { id } = useParams();
-console.log(updatePost)
-console.log(allPosts)
+
+
   useEffect(() => {
     const prefillFormData = () => {
       const onePost = allPosts.find(post => {
@@ -27,15 +26,14 @@ console.log(allPosts)
 
 
   const handleChange = (e) => {
-    const { title, value } = e.target;
+    const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
-      [title]: value,
+      [name]: value,
     }));
   }
 
   return (
-    <Layout>
       <div className="form-container">
         <form onSubmit={(e) => {
           e.preventDefault()
@@ -46,7 +44,7 @@ console.log(allPosts)
             <input
               type="text"
               name="title"
-              defaultValue={title}
+              value={title}
               onChange={handleChange}
             />
           </label>
@@ -54,13 +52,16 @@ console.log(allPosts)
             <input
               type="text"
               name="body"
-              defaultValue={body}
+              value={body}
               onChange={handleChange}
             />
             </label>
           <button>Submit</button>
         </form>
+        
+        <h1>good test</h1>
+
+            
       </div>
-    </Layout>
   )
 }

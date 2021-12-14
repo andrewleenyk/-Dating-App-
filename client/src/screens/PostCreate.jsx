@@ -1,24 +1,25 @@
 import React, { useState } from 'react'
-import Layout from '../../Layouts/Layout';
 
-export default function PostCreate(props) {
+
+export default function PostCreate({ createPost }) {
   const [formData, setFormData] = useState({
     title: "",
     body: ""
   });
   const { title, body } = formData;
-  const { createPost } = props;
+  console.log(formData)
 
   const handleChange = (e) => {
-    const { title, value } = e.target;
+
+    const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
-      [title]: value
+      [name]: value,
     }));
   }
+  console.log(formData)
 
   return (
-    <Layout>
       <div className="form-container">
         <form onSubmit={(e) => {
           e.preventDefault()
@@ -28,7 +29,7 @@ export default function PostCreate(props) {
           <label>Title:
             <input
               type="text"
-              name="name"
+              name="title"
               value={title}
               onChange={handleChange}
             />
@@ -44,6 +45,5 @@ export default function PostCreate(props) {
           <button>Submit</button>
         </form>
       </div>
-    </Layout>
   )
 }
