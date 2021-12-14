@@ -39,14 +39,14 @@ export default function Layout({ currentUser, handleLogout, children }) {
         {currentUser ? (
 
           <li>
-<Link to='/' className="three-d" onClick={handleLogout}>{currentUser.username}
+<Link to='/' className="three-d" >{currentUser.username}
               <span className="three">
                 <span className="front">{currentUser.username}</span>
                 <span className="back">{currentUser.username}</span>
               </span>
               </Link>
 					<ul className="drop-menu">
-						<li><Link to='/' className="three-d" >
+						<li><Link to='/profile' className="three-d" >
 								Profile
 								<span className="three"><span className="front">Profile</span><span class="back">Profile</span></span>
                 </Link></li>

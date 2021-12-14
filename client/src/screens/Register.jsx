@@ -7,9 +7,9 @@ export default function Register(props) {
     password: '',
     profile_pic: '',
     bio: '',
-    interests: []
+    interests: ['hello','non']
   });
-  const { username, email, password } = formData;
+  const { username, email, password, profile_pic, bio, interests } = formData;
   const { handleRegister } = props;
 
   const handleChange = (e) => {
@@ -51,7 +51,7 @@ export default function Register(props) {
       <label>
         Password:
         <input
-          type='password'
+          type='text'
           name='password'
           value={password}
           onChange={handleChange}
@@ -61,7 +61,7 @@ export default function Register(props) {
       <label>
         profile_pic:
         <input
-          type='profile_pic'
+          type='text'
           name='profile_pic'
           value={profile_pic}
           onChange={handleChange}
@@ -71,7 +71,7 @@ export default function Register(props) {
       <label>
         bio:
         <input
-          type='bio'
+          type='text'
           name='bio'
           value={bio}
           onChange={handleChange}
@@ -79,9 +79,9 @@ export default function Register(props) {
       </label>
       <br />
       <label>
-        profile_pic:
+        interests:
         <input
-          type='interests'
+          type='text'
           name='interests'
           value={interests}
           onChange={handleChange}

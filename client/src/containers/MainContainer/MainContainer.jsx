@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
 import { getAllPosts, postPost, putPost, deletePost} from '../../services/posts';
 import Posts from '../../screens/Posts'
+import Profile from '../../screens/Profile'
 import PostDetail from '../../screens/PostDetail';
 import PostCreate from '../../screens/PostCreate';
 import PostEdit from '../../screens/PostEdit';
@@ -68,6 +69,12 @@ function MainContainer({ currentUser }) {
         <Route path='/posts'>
             <Posts
             allPosts={allPosts}
+            />
+        </Route>
+        <Route path='/profile'>
+            <Profile
+            allPosts={allPosts}
+            currentUser={currentUser}
             />
         </Route>
         <Route path='/'>
