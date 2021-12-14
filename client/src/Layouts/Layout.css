@@ -18,10 +18,11 @@
 .Layout-title {
     font-family: 'quartzo-cufonfonts';
     font-size: 7rem;
-    margin: 0px 0px 0px 30px;
+    margin: 0px 0px 0px 40px;
     color: white;
     letter-spacing: 3px;
 
+text-shadow: 5px 4px 0 #7a7a7acb;
 
 
     
