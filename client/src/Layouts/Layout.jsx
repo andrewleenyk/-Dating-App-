@@ -1,34 +1,10 @@
 import { Link } from 'react-router-dom';
+import './Layout.css';
 
 export default function Layout({ currentUser, handleLogout, children }) {
   return (
-    <div>
-      <header>
-      <Link to='/'>blog app</Link>
-      <Link to='/'>about</Link>
-
-            <Link to='/posts'>posts</Link>
-        
-        {currentUser ? (
-          <div>
-            <p>{currentUser.username}</p>
-            <button onClick={handleLogout}>Logout</button>
-          </div> 
-        ) : (
-          <>
-          <Link to='/login'>Login</Link>
-          <Link to='/register'>Register</Link>
-        </>
-
-        )}
-
-      </header>
-      <br/>
-      {children}
-    </div>
-  );
-}
-
+    <div className="Layout-div">
+      <h1 className="Layout-title">Tech Review</h1>
 <ul class="nav-menu">
 				<li>
         <Link to='/' className="three-d">
@@ -60,12 +36,57 @@ export default function Layout({ currentUser, handleLogout, children }) {
 				  </Link>
         </li>
 
-				<li><a href="#" class="three-d">
-					Services
-					<span class="three"><span class="front">Services</span><span class="back">Services</span></span>
-				</a></li>
-				<li><a href="#" class="three-d">
-					Products
-					<span class="three"><span class="front">Products</span><span class="back">Products</span></span>
-				</a></li>
+        {currentUser ? (
+
+          <li>
+<Link to='/' className="three-d" onClick={handleLogout}>{currentUser.username}
+              <span className="three">
+                <span className="front">{currentUser.username}</span>
+                <span className="back">{currentUser.username}</span>
+              </span>
+              </Link>
+					<ul class="clearfix unstyled drop-menu">
+						<li><Link to='/' className="three-d" >
+								Profile
+								<span className="three"><span className="front">Profile</span><span class="back">Profile</span></span>
+                </Link></li>
+							<li><Link to='/' className="three-d" onClick={handleLogout}>Logout
+              <span className="three">
+                <span className="front">Logout</span>
+                <span className="back">Logout</span>
+              </span>
+              </Link></li>
+
+					</ul>
+				</li>
+        ) : (
+          <>
+            <li>
+            <Link to='/login' className="three-d">
+            Login
+              <span className="three">
+                <span className="front">Login</span>
+                <span className="back">Login</span>
+              </span>
+            </Link>
+            </li>
+
+            <li>
+            <Link to='/register' className="three-d">
+            Register
+              <span className="three">
+                <span className="front">Register</span>
+                <span className="back">Register</span>
+              </span>
+            </Link>
+            </li>
+        </>
+        )}
         </ul>
+      <br/>
+      {children}
+    </div>
+  );
+}
+
+
