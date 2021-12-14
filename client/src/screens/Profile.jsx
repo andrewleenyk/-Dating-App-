@@ -8,7 +8,6 @@ return (
             <ProfileDetail
             allPosts={allPosts}
             currentUser={currentUser}
-
             />
             <Link to="/posts/new"><button>create a post</button></Link>
         </div>
