@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 
 
-export default function PostCreate({ createPost }) {
+export default function PostCreate({ createPost, currentUser }) {
   const [formData, setFormData] = useState({
     title: "",
-    body: ""
+    body: "",
+    author: currentUser.username
   });
   const { title, body } = formData;
   console.log(formData)

@@ -23,6 +23,7 @@ export default function PostDetail({ allPosts, removePost, currentUser}) {
 
             {currentUser?.id === post.user_id && (
               <>
+              <h1>{currentUser.username}</h1>
               <Link to={`/posts/${post.id}/edit`}>
                 <button>Update</button>
               </Link>

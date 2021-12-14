@@ -51,6 +51,7 @@ function MainContainer({ currentUser }) {
         <Route path='/posts/new'>
         <PostCreate
             createPost={createPost}
+            currentUser={currentUser}
         />
         </Route>
         <Route path='/posts/:id/edit'>
