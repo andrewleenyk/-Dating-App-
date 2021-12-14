@@ -4,7 +4,7 @@ import './Layout.css';
 export default function Layout({ currentUser, handleLogout, children }) {
   return (
     <div className="Layout-div">
-            <h1 data-shadow='dang!' className="Layout-title">Web3 Review</h1>
+            <h1 data-shadow='dang!' className="Layout-title">Daily Node</h1>
 <ul class="nav-menu">
 				<li>
         <Link to='/' className="three-d">

@@ -11,14 +11,19 @@
     align-items: center;
 
 }
+@font-face {
+    font-family: 'quartzo-cufonfonts';
+    src: url('../Layouts/quartzo-cufonfonts/QUARTZO-regular.ttf');
+}
 .Layout-title {
-
+    font-family: 'quartzo-cufonfonts';
     font-size: 7rem;
     margin: 0px 0px 0px 30px;
     color: white;
+    letter-spacing: 3px;
 
-    font-family: 'quartzo-cufonfonts';
-    src: url('../Layouts/quartzo-cufonfonts/QUARTZO-regular.ttf');
+
+
     
 }
 ul, li {
