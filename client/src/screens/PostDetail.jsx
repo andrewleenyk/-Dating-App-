@@ -17,13 +17,12 @@ export default function PostDetail({ allPosts, removePost, currentUser}) {
         {
           post &&
           <div className="card">
-          <h2>post detail</h2>
+          <h2>{post.author}</h2>
             <h3>{post.title}</h3>
             <p>{post.body}</p>
 
             {currentUser?.id === post.user_id && (
               <>
-              <h1>{currentUser.username}</h1>
               <Link to={`/posts/${post.id}/edit`}>
                 <button>Update</button>
               </Link>
