@@ -5,9 +5,10 @@ export default function PostCreate({ createPost, currentUser }) {
   const [formData, setFormData] = useState({
     title: "",
     body: "",
-    author: currentUser.username
+    author: currentUser.username,
+    thumbnail: ""
   });
-  const { title, body } = formData;
+  const { title, body, thumbnail } = formData;
   console.log(formData)
 
   const handleChange = (e) => {
