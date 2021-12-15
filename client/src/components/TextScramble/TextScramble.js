@@ -88,7 +88,10 @@ class TextScramble {
     "cryptocurrency",
     "virtual reality",
     "space",
-    "tokenizations"
+    "tokenization"
+  ];
+  const phrases4 = [
+    "decentralization"
   ];
 
   const el = document.querySelector(".text");

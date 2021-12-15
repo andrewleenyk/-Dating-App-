@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import './Nav.css'
-import TextScramble from './TextScramble/TextScramble';
+import TextScramble from '../TextScramble/TextScramble';
 export default function Nav({ currentUser, handleLogout }) {
+
   return (
     <div className="Nav-div">
-          <h1 data-shadow='dang!' className="Nav-title">
+          <h1 className="Nav-title">
         Daily Node
       </h1>
 
