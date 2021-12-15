@@ -3,7 +3,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
 import MainContainer from './containers/MainContainer/MainContainer';
-import Login from './screens/Login'
+import Login from './screens/Login/Login'
 import {
   loginUser,
   registerUser, 
@@ -11,7 +11,7 @@ import {
   removeToken,
 } from './services/auth';
 import Layout from './Layouts/Layout';
-import Register from './screens/Register';
+import Register from './screens/Register/Register';
 import modern from './modern-min-design.png';
 
 function App() {

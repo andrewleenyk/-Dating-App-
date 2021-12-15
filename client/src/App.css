@@ -1,16 +1,8 @@
 .App {
   text-align: center;
-  height:2000px;
   /*background-image: linear-gradient(to right, rgb(0,81,219), rgb(71,191,165)); */
   background-color: black;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-
 
 .App-header {
   background-color: #282c34;
@@ -29,6 +21,15 @@
 
 
 
+@media only screen and (max-width: 730px) {
+  body {
+    background-color: lightblue;
+  }
+}
 
 
-
+@media only screen and (max-width: 380px) {
+  body {
+    background-color: lightblue;
+  }
+}
