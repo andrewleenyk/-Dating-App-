@@ -4,9 +4,10 @@ import { useParams } from 'react-router-dom';
 export default function PostEdit({ updatePost, allPosts}) {
   const [formData, setFormData] = useState({
     title: "",
+    thumbnail: "",
     body: ""
   });
-  const { title, body } = formData;
+  const { title, thumbnail, body } = formData;
 
   const { id } = useParams();
 
@@ -16,8 +17,8 @@ export default function PostEdit({ updatePost, allPosts}) {
       const onePost = allPosts.find(post => {
         return post.id === Number(id);
       })
-      const { title, body } = onePost;
-      setFormData({ title, body });
+      const { title, thumbnail, body } = onePost;
+      setFormData({ title, thumbnail, body });
     }
     if (allPosts.length) {
       prefillFormData()
@@ -34,34 +35,62 @@ export default function PostEdit({ updatePost, allPosts}) {
   }
 
   return (
-      <div className="form-container">
-        <form onSubmit={(e) => {
-          e.preventDefault()
-          updatePost(id, formData);
-        }}>
-          <h3>Update Post</h3>
-          <label>Title:
-            <input
-              type="text"
-              name="title"
-              value={title}
-              onChange={handleChange}
-            />
-          </label>
-          <label>Body:          
-            <input
-              type="text"
-              name="body"
-              value={body}
-              onChange={handleChange}
-            />
-            </label>
-          <button>Submit</button>
-        </form>
-        
-        <h1>good test</h1>
-
-            
-      </div>
+    <div className="login-box" id="register-box">
+    <h2 className="form-title">Update Node</h2>
+    <form >
+    
+    <div class="user-box">
+    
+    <input
+    id="input"
+    type='text'
+    name='title'
+    value={title}
+    onChange={handleChange}
+    />
+        <label id='login-label'>
+    Title:
+    </label>
+    </div>
+    
+    <div class="user-box">
+    <input
+    id="input"
+    type='text'
+    name='thumbnail'
+    value={thumbnail}
+    onChange={handleChange}
+    />
+        <label id='login-label'>
+    Thumbnail (url):
+    </label>
+    </div>
+    
+    <div class="user-box">
+    <textarea 
+    id="input"
+    type='text'
+    name='body'
+    rows="8"
+    value={body}
+    onChange={handleChange}
+    />
+        <label id='login-label'>
+    Body:
+    </label>
+    </div>
+    
+    <a onClick={(e) => {
+    e.preventDefault()
+    updatePost(id, formData);
+    }}>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Create
+    </a>
+    </form>
+    </div>
   )
 }

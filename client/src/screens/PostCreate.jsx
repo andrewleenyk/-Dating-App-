@@ -63,7 +63,7 @@ export default function PostCreate({ createPost, currentUser }) {
     onChange={handleChange}
     />
         <label id='login-label'>
-    Bio:
+    Body:
     </label>
     </div>
     

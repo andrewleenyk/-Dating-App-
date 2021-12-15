@@ -10,6 +10,7 @@ return (
                 <Link to={`/posts/${post.id}`}>
                 <Card
                     title={post.title}
+                    thumbnail={post.thumbnail}
                     body={post.body}
                 />
                 </Link> 
