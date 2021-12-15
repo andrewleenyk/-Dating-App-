@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom';
+import './PostDetail.css'
 
 export default function PostDetail({ allPosts, removePost, currentUser}) {
   const { id } = useParams();
@@ -17,9 +18,9 @@ export default function PostDetail({ allPosts, removePost, currentUser}) {
         {
           post &&
           <div className="card">
-          <h2>{post.author}</h2>
-            <h3>{post.title}</h3>
+            <h1>{post.title}</h1>
             <p>{post.body}</p>
+            <h3>{post.author}</h3>
 
             {currentUser?.id === post.user_id && (
               <>

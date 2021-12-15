@@ -1,26 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import './ProfileDetail.css'
 
 export default function ProfileDetail({ allPosts, currentUser}) {
 return (
-        <div className="card-list">
+        <div className="profile-detail">
 
-            <img src={currentUser.profile_pic}></img>
-            <h1>{currentUser.username}</h1>
-            <h1>{currentUser.bio}</h1>
-
+            <img className="profile-pic" src={currentUser.profile_pic}></img>
+            <h1 className="username">{currentUser.username}</h1>
+            <h3 className="bio">{currentUser.bio}</h3>
+            <h1>Nodes: </h1>
                 {allPosts.map(post => {
                     if (post.user_id === currentUser?.id) {
                         return <Link to={`/posts/${post.id}`}>{post.title}</Link>
                     }
                 })}
-
-            <section>
-                {currentUser.interests.map(interest => (
-                    <h5>{interest}</h5>
-                ))}
-            </section>
         </div>
 
 

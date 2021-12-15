@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import './Register.css'
+
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -6,10 +8,9 @@ export default function Register(props) {
     email: '',
     password: '',
     profile_pic: '',
-    bio: '',
-    interests: ['hello','non']
+    bio: ''
   });
-  const { username, email, password, profile_pic, bio, interests } = formData;
+  const { username, email, password, profile_pic, bio } = formData;
   const { handleRegister } = props;
 
   const handleChange = (e) => {
@@ -21,74 +22,87 @@ export default function Register(props) {
   };
 
   return (
-    <form
-      onSubmit={(e) => {
+    <div className="login-box" id="register-box">
+          <h2 className="form-title">Register</h2>
+    <form >
+
+    <div class="user-box">
+
+      <input
+      id="input"
+      type='text'
+      name='username'
+      value={username}
+      onChange={handleChange}
+      />
+              <label id='login-label'>
+      Username:
+      </label>
+      </div>
+
+      <div class="user-box">
+      <input
+      id="input"
+      type='text'
+      name='email'
+      value={email}
+      onChange={handleChange}
+      />
+              <label id='login-label'>
+      Email:
+      </label>
+      </div>
+
+      <div class="user-box">
+      <input
+      type='password'
+      name='password'
+      value={password}
+      onChange={handleChange}
+      />
+              <label id='login-label'>
+      Password:
+      </label>
+      </div>
+
+      <div class="user-box">
+      <input
+      id="input"
+      type='text'
+      name='profile_pic'
+      value={profile_pic}
+      onChange={handleChange}
+      />
+              <label id='login-label'>
+      Profile Pic:
+      </label>
+      </div>
+
+      <div class="user-box">
+      <textarea 
+      id="input"
+      type='text'
+      name='bio'
+      rows="6"
+      value={bio}
+      onChange={handleChange}
+      />
+              <label id='login-label'>
+      Bio:
+      </label>
+      </div>
+
+      <a onClick={(e)=> {
         e.preventDefault();
         handleRegister(formData);
-      }}
-    >
-      <h3>Register</h3>
-      <label>
-        Username:
-        <input
-          type='text'
-          name='username'
-          value={username}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        Email:
-        <input
-          type='text'
-          name='email'
-          value={email}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        Password:
-        <input
-          type='text'
-          name='password'
-          value={password}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        profile_pic:
-        <input
-          type='text'
-          name='profile_pic'
-          value={profile_pic}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        bio:
-        <input
-          type='text'
-          name='bio'
-          value={bio}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        interests:
-        <input
-          type='text'
-          name='interests'
-          value={interests}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <button>Submit</button>
+        }}>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </a>
     </form>
+    </div>
   );
 }

@@ -18,7 +18,7 @@ const handleChange = (e) => {
 
 return (
     <div className="login-box">
-            <h2>Login</h2>
+            <h2 className="form-title">Login</h2>
         <form >
         <div class="user-box">
 
@@ -42,7 +42,6 @@ return (
                     <label id='login-label'>
             Password:
         </label>
-
         </div>
         <a onClick={(e)=> {
         e.preventDefault();
