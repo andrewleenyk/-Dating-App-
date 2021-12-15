@@ -28,22 +28,22 @@ return (
             value={username}
             onChange={handleChange}
             />
-                    <label>
+                    <label id='login-label'>
             Username:
         </label>
-        <br />
-
+        </div>
+        <div class="user-box">
             <input
             type='password'
             name='password'
             value={password}
             onChange={handleChange}
             />
-                    <label>
+                    <label id='login-label'>
             Password:
         </label>
-        </div>
 
+        </div>
         <a onClick={(e)=> {
         e.preventDefault();
         handleLogin(formData);

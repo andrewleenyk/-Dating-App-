@@ -16,6 +16,7 @@ input:-webkit-autofill:focus {
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
     height: 500px;
+    Margin-top: 100px;
   }
   
   .login-box h2 {
@@ -40,7 +41,7 @@ input:-webkit-autofill:focus {
     outline: none;
     background: transparent !important;
   }
-  .login-box .user-box label {
+  .login-box .user-box #login-label {
     position: absolute;
     top:0;
     left: 0;
@@ -51,8 +52,8 @@ input:-webkit-autofill:focus {
     transition: .5s;
   }
   
-  .login-box .user-box input:focus ~ label,
-  .login-box .user-box input:valid ~ label {
+  .login-box .user-box input:focus ~ #login-label,
+  .login-box .user-box input:valid ~ #login-label {
     top: -20px;
     left: 0;
     color: #ffffff;
