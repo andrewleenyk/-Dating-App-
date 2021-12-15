@@ -1,11 +1,10 @@
 import './About.css';
-import TextAnimation from '../../components/TextAnimation/TextAnimation';
+import TextAnimationAbout from '../../components/TextAnimationAbout/TextAnimationAbout';
 export default function About() {
 
 return (
     <div className="About">
-        <h1>About</h1>
-        <TextAnimation />
+        <TextAnimationAbout />
     </div>
     
 );

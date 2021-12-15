@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../../components/Card/Card';
+import './Posts.css'
 
 export default function Posts({ allPosts, currentUser}) {
 return (
@@ -12,6 +13,7 @@ return (
                     title={post.title}
                     thumbnail={post.thumbnail}
                     body={post.body}
+                    author={post.author}
                 />
                 </Link> 
             </React.Fragment>
