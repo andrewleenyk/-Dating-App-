@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css'
+import TextScramble from './TextScramble/TextScramble';
 export default function Nav({ currentUser, handleLogout }) {
   return (
     <div className="Nav-div">
           <h1 data-shadow='dang!' className="Nav-title">
         Daily Node
       </h1>
+
+      <TextScramble />
+
 <ul class="nav-menu">
 				<li>
         <Link to='/' className="three-d">
