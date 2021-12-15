@@ -16,6 +16,8 @@ return (
             </React.Fragment>
             ))}
             <Link to="/posts/new"><button>create a post</button></Link>
+
+            
         </div>
 
 

@@ -6,6 +6,7 @@ import Profile from '../../screens/Profile'
 import PostDetail from '../../screens/PostDetail';
 import PostCreate from '../../screens/PostCreate';
 import PostEdit from '../../screens/PostEdit';
+import Home from '../../screens/Home';
 
 function MainContainer({ currentUser }) {
     const [allPosts, setAllPosts] = useState([]);
@@ -80,6 +81,7 @@ function MainContainer({ currentUser }) {
         </Route>
         <Route path='/'>
           <h1>Home</h1>
+          <Home/>
         </Route>
         </Switch>
     </>

@@ -19,14 +19,42 @@ User.destroy_all
 )
 
 @testpost1 = Post.create!(
-    title: 'WEB3',
-    body: 'It is a cool concept.',
+    title: 'What is WEB3',
+    body: 'web3 is currently considered the decentralized web. right now we have a centralized web - data is stored in large data centers owned by centralized businesses. the decentralized web, in theory, would spread the data storage and computation needed for websites and websites away from those centralized sources and onto decentralized networks such as ones that would run across all computers running one of these systems. a lot of people think that Blockchain technology will be involved.',
     author: @john.username,
     user: @john
 )
 @testpost2 = Post.create!(
-    title: 'WEB2',
-    body: 'It is soo old.',
+    title: 'What is Blockchain',
+    body: "Whenever someone sends money (creates a transaction) and their send is truthful, there's a hash created. A hash is like a secret word that you can only remember if you combine a few other words you always know. By combining some of the information about a recently solved math problem and some information about the current transaction, you can ensure that no one can fake our transaction again - not even yourself. Each transaction is contained within some notes about that recently solved math problem - these notes are called 'blocks'. When we hash the blocks and the transactions together, it creates a chain with links that are impossible to replace without going back and doing all of the math problems again and convincing all of the other people that your new, replacement work is the real work. This is virtually impossible, so transactions and blocks are not able to be faked or undone.",
+    author: @sam.username,
+    user: @sam
+)
+@testpost3 = Post.create!(
+    title: 'What is defi, and as a long time cold storage eth hodler, why should I care?',
+    body: "Even as a hodler you should care because part of what drives drives Ethereum value is its usage (network effect). If everyone was just hodling the network would not be used as much and would not have as much value. I can get more into detailed later on that depending on the answers.
+
+    DeFi is interesting because it inherits all the attributes (the good and the bad) we like about the blockchain, e.g. trustless, permissionless, decentralised.
+    
+    Let's give an example of usage that maybe makes more sense to you than all the current craze we're currently seeing with yield farming.
+    
+    Let's say you own $10K worth of crypto that you don't want to sell. Tomorrow your car dies and you need to buy a new one. You think it's not the right time to sell your crypto because you're bullish long terms, but still you don't have enough money in your account to buy the car.
+    
+    What you do then is to put your $10K worth of crypto in collateral to take a $5K loan in DAI with DeFi (currently at 1.44%). You then transfer theses 5K DAI to a centralised exchange to withdraw actual dollars to your bank account to buy your new car.
+    
+    Then every month you can pay back your loan. Eventually some time later you will have paid your loan back and it doesn't matter how (but I can go into details depending on the replies). What matters is you didn't have to sell now to have access to the cash if you didn't think it was the right time to.",
+    author: @sam.username,
+    user: @sam
+)
+@testpost5 = Post.create!(
+    title: 'How does a blockchain continue to award nodes and miners once the hardcap of total coins is reached?',
+    body: "First of all, blockchain and crypto aren't the same. Blockchain is the technology upon which crypto is built upon, but has many more applications outside of currency.
+
+    Secondly, this is not a problem for all crypto. This is just about some crypto, such as BTC.
+    
+    Anyway. I think this is a fatal flaw in the design of BTC. It's too expensive to use for every day transactions to be worth it. Miners will leave the network as it becomes less profitable as fewer people use it to transact anything. Because of its weak implementation of the consensus algorithm, it requires a lot of energy. Miners leaving reduces the security of the network. As soon as they leave en masse, the network fails.
+    
+    People are driven by money. When this thing becomes unsustainable, it will collapse. But not all crypto will have the same fate.",
     author: @sam.username,
     user: @sam
 )
