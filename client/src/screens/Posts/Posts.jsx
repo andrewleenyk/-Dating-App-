@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Card from '../components/Card/Card';
+import Card from '../../components/Card/Card';
 
 export default function Posts({ allPosts, currentUser}) {
 return (
