@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './ProfileDetail.css'
 
 export default function ProfileDetail({ allPosts, currentUser}) {
