@@ -10,7 +10,7 @@ return (
                 <Link className="card-div" to={`/posts/${post.id}`}>
                 <img className="image" src={post.thumbnail} />
                 <div className="hover-cards">
-                    <span className="text">
+                    <span className="title-card">
                         <h3 className="card-title">{post.title}</h3>
                         <div className="row">
                             <div className="col">
