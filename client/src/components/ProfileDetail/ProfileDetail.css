@@ -24,3 +24,8 @@ a {
 .profile-pic {
     border-radius: 5px;
 }
+.profile-nodes {
+    font-size: 1rem;
+    margin: 0px;
+    padding: 5px;
+}
