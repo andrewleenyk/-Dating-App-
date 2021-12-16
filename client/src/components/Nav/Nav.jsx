@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { useEffect } from 'react';
 import './Nav.css'
 import TextScramble from '../TextScramble/TextScramble';
 export default function Nav({ currentUser, handleLogout }) {
@@ -14,7 +12,7 @@ export default function Nav({ currentUser, handleLogout }) {
 
       <TextScramble />
 
-<ul class="nav-menu">
+<ul className="nav-menu">
 				<li>
         <Link to='/' className="three-d">
 					Home
@@ -26,7 +24,7 @@ export default function Nav({ currentUser, handleLogout }) {
         </li>
 
         <li>
-        <Link to='/' className="three-d">
+        <Link to='/about' className="three-d">
 					About
             <span className="three">
               <span className="front">About</span>
@@ -48,16 +46,16 @@ export default function Nav({ currentUser, handleLogout }) {
         {currentUser ? (
 
           <li>
-<Link to='/' className="three-d" >{currentUser.username}
+<a className="three-d" >{currentUser.username}
               <span className="three">
                 <span className="front">{currentUser.username}</span>
                 <span className="back">{currentUser.username}</span>
               </span>
-              </Link>
+              </a>
 					<ul className="drop-menu">
 						<li><Link to='/profile' className="three-d" >
 								Profile
-								<span className="three"><span className="front">Profile</span><span class="back">Profile</span></span>
+								<span className="three"><span className="front">Profile</span><span className="back">Profile</span></span>
                 </Link></li>
 							<li><Link to='/' className="three-d" onClick={handleLogout}>Logout
               <span className="three">

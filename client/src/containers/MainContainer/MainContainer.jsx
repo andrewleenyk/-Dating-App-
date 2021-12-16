@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
 import { getAllPosts, postPost, putPost, deletePost} from '../../services/posts';
-import Posts from '../../screens/Posts'
-import Profile from '../../screens/Profile'
-import PostDetail from '../../screens/PostDetail';
-import PostCreate from '../../screens/PostCreate';
-import PostEdit from '../../screens/PostEdit';
-import Home from '../../screens/Home';
+import Posts from '../../screens/Posts/Posts'
+import Profile from '../../screens/Profile/Profile'
+import PostDetail from '../../screens/PostDetail/PostDetail';
+import PostCreate from '../../screens/PostCreate/PostCreate';
+import PostEdit from '../../screens/PostEdit/PostEdit';
+import Home from '../../screens/Home/Home';
+import About from '../../screens/About/About';
 
 function MainContainer({ currentUser }) {
     const [allPosts, setAllPosts] = useState([]);
@@ -79,8 +80,10 @@ function MainContainer({ currentUser }) {
             currentUser={currentUser}
             />
         </Route>
+        <Route path='/about'>
+            <About/>
+        </Route>
         <Route path='/'>
-          <h1>Home</h1>
           <Home/>
         </Route>
         </Switch>

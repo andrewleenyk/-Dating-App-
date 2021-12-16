@@ -4,13 +4,13 @@ export default function TextAnimation() {
 return (
     <div className="text-animation-box">
         <div>
-            <p class="slide-up"><span class="green">Hello there</span>,</p>
+            <p className="slide-up"><span className="green">Welcome</span>,</p>
         </div>
         <div>
-            <p class="slide-up">this is just</p>
+            <p className="slide-up">please enjoy</p>
         </div>
         <div>
-            <p class="slide-up">a test.</p>
+            <p className="slide-up">your stay.</p>
         </div>
     </div>
     

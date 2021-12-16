@@ -8,6 +8,7 @@
   flex-direction: column;
   overflow: hidden;
   font-family: "Spartan", sans-serif;
+  font-family: 'Roboto Mono', monospace;
   color: #ffffff;
 }
 
@@ -20,7 +21,7 @@
 }
 
 .text-animation-box {
-  margin: 80px 0 0 80px;
+  margin: 0px 0px 0px 80px;
   font-size: 64px;
   width: -webkit-max-content;
   width: -moz-max-content;

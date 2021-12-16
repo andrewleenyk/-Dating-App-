@@ -110,8 +110,8 @@ class TextScramble {
 });
 
   return (
-    <div class="container">
-        <div class="text"></div>
+    <div className="container">
+        <div className="text"></div>
     </div>
   )
 
