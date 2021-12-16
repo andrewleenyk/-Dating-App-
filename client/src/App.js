@@ -10,9 +10,8 @@ import {
   verifyUser,
   removeToken,
 } from './services/auth';
-import Layout from './Layouts/Layout';
+import Layout from './screens/Layout/Layout';
 import Register from './screens/Register/Register';
-import modern from './modern-min-design.png';
 
 function App() {
 
