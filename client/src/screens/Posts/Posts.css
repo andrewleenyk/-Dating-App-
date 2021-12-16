@@ -3,4 +3,10 @@
     width: 100vw;
     flex-wrap: wrap;
 
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    height: 100vh;
+    flex-wrap: wrap;
+
 }
