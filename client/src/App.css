@@ -2,6 +2,7 @@
   text-align: center;
   /*background-image: linear-gradient(to right, rgb(0,81,219), rgb(71,191,165)); */
   background-color: black;
+  height: fit-content;
 }
 
 .App-header {
@@ -43,6 +44,13 @@
   transition: .5s ease;
   background: rgb(0, 0, 0)!important;
   padding: 0;
+}
+.Nav-title {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 5rem !important;
+  margin: 0px;
+  color: white;
+  letter-spacing: 3px;
 }
 }
 
