@@ -29,7 +29,7 @@ export default function Register(props) {
     <div class="user-box">
 
       <input
-      id="input"
+      className="input-nav"
       type='text'
       name='username'
       value={username}
@@ -42,7 +42,7 @@ export default function Register(props) {
 
       <div class="user-box">
       <input
-      id="input"
+      className="input-nav"
       type='text'
       name='email'
       value={email}
@@ -53,7 +53,7 @@ export default function Register(props) {
       </label>
       </div>
 
-      <div class="user-box">
+      <div className="user-box">
       <input
       type='password'
       name='password'
@@ -67,7 +67,7 @@ export default function Register(props) {
 
       <div className="user-box">
       <input
-      id="input"
+      className="input-nav"
       type='text'
       name='profile_pic'
       value={profile_pic}
@@ -80,7 +80,7 @@ export default function Register(props) {
 
       <div className="user-box">
       <textarea 
-      id="input"
+      className="input-nav"
       type='text'
       name='bio'
       rows="6"
