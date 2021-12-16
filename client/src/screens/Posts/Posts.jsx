@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Card from '../../components/Card/Card';
 import './Posts.css'
 
 export default function Posts({ allPosts, currentUser}) {
+
+const isLoggedIn = () => {
+    if (currentUser) {
+        console.log('h')
+        return <Link to="/posts/new"><button>create a post</button></Link>;
+    }
+}
 return (
         <div className="card-list">
             {allPosts.map(post => (
@@ -21,9 +27,8 @@ return (
                 </div>
                 </Link> 
             ))}
-            <Link to="/posts/new"><button>create a post</button></Link>
+            {isLoggedIn}
 
-            
         </div>
 
 
