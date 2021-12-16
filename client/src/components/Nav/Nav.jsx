@@ -46,12 +46,12 @@ export default function Nav({ currentUser, handleLogout }) {
         {currentUser ? (
 
           <li>
-<a className="three-d" >{currentUser.username}
+<Link to='/profile' className="three-d" >{currentUser.username}
               <span className="three">
                 <span className="front">{currentUser.username}</span>
                 <span className="back">{currentUser.username}</span>
               </span>
-              </a>
+              </Link>
 					<ul className="drop-menu">
 						<li><Link to='/profile' className="three-d" >
 								Profile

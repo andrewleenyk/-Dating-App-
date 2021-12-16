@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css'
 export default function Card(props) {
-const { title, thumbnail, body, author } = props;
+const { title, thumbnail } = props;
 return (
     <div className="card">
         <h3>{title}</h3>

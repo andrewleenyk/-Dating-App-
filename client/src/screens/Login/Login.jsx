@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import './Login.css';
+import { Link } from 'react-router-dom';
+
+
 export default function Login(props) {
 const [formData, setFormData] = useState({
     username: '',
@@ -43,7 +46,7 @@ return (
             Password:
         </label>
         </div>
-        <a onClick={(e)=> {
+        <Link to='/profile' onClick={(e)=> {
         e.preventDefault();
         handleLogin(formData);
         }}>
@@ -52,7 +55,7 @@ return (
       <span></span>
       <span></span>
       Submit
-    </a>
+    </Link>
         </form>
     </div>
     

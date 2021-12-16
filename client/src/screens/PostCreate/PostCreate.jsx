@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { Link } from 'react-router-dom';
 
 export default function PostCreate({ createPost, currentUser }) {
   const [formData, setFormData] = useState({
@@ -67,7 +67,7 @@ export default function PostCreate({ createPost, currentUser }) {
     </label>
     </div>
     
-    <a onClick={(e) => {
+    <Link onClick={(e) => {
     e.preventDefault()
     createPost(formData)
     }}>
@@ -76,7 +76,7 @@ export default function PostCreate({ createPost, currentUser }) {
     <span></span>
     <span></span>
     Create
-    </a>
+    </Link>
     </form>
     </div>
   )

@@ -11,7 +11,7 @@ return (
             <h3 className="bio">{currentUser.bio}</h3>
             <section>
                 <h1>Nodes: </h1>
-                    {allPosts.map(post => {
+                    {allPosts.forEach(post => {
                         if (post.user_id === currentUser?.id) {
                             return <Link to={`/posts/${post.id}`}>{post.title}</Link>
                         }
