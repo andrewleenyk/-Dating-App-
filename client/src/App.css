@@ -15,16 +15,35 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width: 830px) {
+
+  .card-div {
+    width: 250px !important;
+    height: 250px !important; 
+  }
+  .image{
+    width: 100% !important;
+    width: 250px !important;
+    height: 250px !important;
+    border-radius: 4px !important;
+    transition: all .3s ease !important;
+}
+.card-div:hover .hover-cards{
+  transition: 0.2s ease-in-out;
+  opacity: 1;
+  padding: 0px;
+
 }
 
-
-
-@media only screen and (max-width: 730px) {
-  body {
-    background-color: lightblue;
-  }
+.hover-cards {
+  position: absolute;
+  height: 100% !important;
+  width: 100% !important;
+  opacity: 0;
+  transition: .5s ease;
+  background: rgb(0, 0, 0)!important;
+  padding: 0;
+}
 }
 
 
