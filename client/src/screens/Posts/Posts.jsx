@@ -4,33 +4,26 @@ import './Posts.css'
 
 export default function Posts({ allPosts, currentUser}) {
 
-const isLoggedIn = () => {
-    if (currentUser) {
-        console.log('h')
-        return <Link to="/posts/new"><button>create a post</button></Link>;
-    }
-}
 return (
-        <div className="card-list">
+    <div>
+            <div className="card-list">
             {allPosts.map(post => (
-                <Link className="card-div" to={`/posts/${post.id}`}>
-                <img className="image" src={post.thumbnail} />
+                <Link key={`${post.id}`} className="card-div" to={`/posts/${post.id}`}>
+                <img className="image" src={post.thumbnail} alt="Not Available" />
                 <div className="hover-cards">
                     <span className="title-card">
                         <h3 className="card-title">{post.title}</h3>
                         <div className="row">
                             <div className="col">
-                            <h3>{post.author}</h3>
+                                <h3>{post.author}</h3>
                             </div>
                         </div>
                     </span>
                 </div>
-                </Link> 
+                </Link>
             ))}
-            {isLoggedIn}
-
         </div>
-
-
+{currentUser ? (<Link to="/posts/new"><button>create a post</button></Link>) : (<></>)}
+    </div>
 )
 }

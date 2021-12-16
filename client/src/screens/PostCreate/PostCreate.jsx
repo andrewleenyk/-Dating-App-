@@ -26,7 +26,7 @@ export default function PostCreate({ createPost, currentUser }) {
     <h2 className="form-title">Create Node</h2>
     <form >
     
-    <div class="user-box">
+    <div className="user-box">
     
     <input
     id="input"
@@ -40,7 +40,7 @@ export default function PostCreate({ createPost, currentUser }) {
     </label>
     </div>
     
-    <div class="user-box">
+    <div className="user-box">
     <input
     id="input"
     type='text'
@@ -53,7 +53,7 @@ export default function PostCreate({ createPost, currentUser }) {
     </label>
     </div>
     
-    <div class="user-box">
+    <div className="user-box">
     <textarea 
     id="input"
     type='text'
@@ -67,7 +67,7 @@ export default function PostCreate({ createPost, currentUser }) {
     </label>
     </div>
     
-    <Link onClick={(e) => {
+    <Link to="/posts" onClick={(e) => {
     e.preventDefault()
     createPost(formData)
     }}>

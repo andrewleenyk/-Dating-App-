@@ -92,7 +92,7 @@ export default function Register(props) {
       </label>
       </div>
 
-      <Link onClick={(e)=> {
+      <Link to="/profile" onClick={(e)=> {
         e.preventDefault();
         handleRegister(formData);
         }}>
