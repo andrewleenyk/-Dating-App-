@@ -19,7 +19,7 @@
 
 .text-animation-box {
   margin: auto !important;
-
+  margin-top: 50px;
   font-size: 5vw;
   width: -webkit-max-content;
   width: -moz-max-content;
