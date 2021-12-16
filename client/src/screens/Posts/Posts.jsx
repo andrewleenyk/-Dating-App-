@@ -23,7 +23,7 @@ return (
                 </Link>
             ))}
         </div>
-{currentUser ? (<Link to="/posts/new"><button>create a post</button></Link>) : (<></>)}
+{currentUser ? (<Link to="/posts/new">Create a Node</Link>) : (<></>)}
     </div>
 )
 }
