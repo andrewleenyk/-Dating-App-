@@ -41,6 +41,9 @@ h3{
     font-family: 'Roboto Mono', monospace;
     margin: 5px;
 }
+.col {
+    margin-top: 100px;
+}
 .card-title{
 
     font-family: 'Roboto Mono', monospace;
