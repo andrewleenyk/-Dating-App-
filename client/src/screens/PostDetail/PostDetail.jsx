@@ -18,6 +18,7 @@ export default function PostDetail({ allPosts, removePost, currentUser}) {
         {
           post &&
           <div className="card">
+          <img className="image" src={post.thumbnail} alt="Not Available" />
             <h1 id="title">{post.title}</h1>
             <p id="body">{post.body}</p>
             <h3 id="author">{post.author}</h3>

@@ -17,12 +17,13 @@ return (
                                             {post.user_id === currentUser?.id ? (<Link className="profile-nodes" key={`profile-${post.title}dsss`} to={`/posts/${post.id}`}>{post.title}</Link>) : ( <></> )}
                                             </div>
                                         ))}
-                    */}
-                    {
-                        allPosts.filter(post=>post.user_id === currentUser?.id).map(post=> (
+
+
+
+                                                                allPosts.filter(post=>post.user_id === currentUser?.id).map(post=> (
                             <Link className="profile-nodes" key={`${post.title}`} to={`/posts/${post.id}`}>{post.title}</Link>
                             ))
-                    }
+                    */}
                     </div>
 
         </div>
