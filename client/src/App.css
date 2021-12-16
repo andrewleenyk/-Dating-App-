@@ -69,6 +69,11 @@
   }
   .nav-menu li a {
     margin: 10px;
+    width: 70px;
+  }
+
+  .login-box {
+    width: 300px !important;
   }
 
 
