@@ -65,7 +65,9 @@
   }
   .text-animation-box {
     margin: auto;
+    font-size: 5.5vw !important;
   }
+  
 }
 
 
@@ -73,6 +75,7 @@
   .nav-menu {
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding-left: 0px !important;
   }
   .nav-menu li a {
     margin: 10px;
