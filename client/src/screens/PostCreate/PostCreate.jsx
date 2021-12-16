@@ -55,7 +55,7 @@ export default function PostCreate({ createPost, currentUser }) {
     
     <div className="user-box">
     <textarea 
-    id="input"
+    className="input-nav"
     type='text'
     name='body'
     rows="8"

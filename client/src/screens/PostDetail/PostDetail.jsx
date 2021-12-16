@@ -18,9 +18,9 @@ export default function PostDetail({ allPosts, removePost, currentUser}) {
         {
           post &&
           <div className="card">
-            <h1>{post.title}</h1>
-            <p>{post.body}</p>
-            <h3>{post.author}</h3>
+            <h1 id="title">{post.title}</h1>
+            <p id="body">{post.body}</p>
+            <h3 id="author">{post.author}</h3>
 
             {currentUser?.id === post.user_id && (
               <>
