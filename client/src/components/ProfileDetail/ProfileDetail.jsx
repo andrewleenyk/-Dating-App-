@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProfileDetail.css'
 
-export default function ProfileDetail({ allPosts, currentUser}) {
+export default function ProfileDetail({ currentUser}) {
 return (
         <div className="profile-detail">
 
