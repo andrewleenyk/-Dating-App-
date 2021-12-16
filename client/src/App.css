@@ -59,13 +59,8 @@
   .nav-menu li a {
     width: 70px;
   }
-  .text-animation-box > div > p {
-    white-space:pre-wrap;
-    width:auto !important;
-  }
   .text-animation-box {
-    margin: auto;
-    font-size: 5.5vw !important;
+    font-size: 6vw !important;
   }
   
 }

@@ -12,6 +12,7 @@ return (
         <div>
             <p className="slide-up">your stay.</p>
         </div>
+        
     </div>
     
 );
