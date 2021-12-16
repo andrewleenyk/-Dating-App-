@@ -26,7 +26,7 @@ export default function Register(props) {
           <h2 className="form-title">Register</h2>
     <form >
 
-    <div class="user-box">
+    <div className="user-box">
 
       <input
       className="input-nav"
@@ -40,7 +40,7 @@ export default function Register(props) {
       </label>
       </div>
 
-      <div class="user-box">
+      <div className="user-box">
       <input
       className="input-nav"
       type='text'

@@ -23,7 +23,7 @@ return (
     <div className="login-box">
             <h2 className="form-title">Login</h2>
         <form >
-        <div class="user-box">
+        <div className="user-box">
 
             <input
             type='text'
@@ -35,7 +35,7 @@ return (
             Username:
         </label>
         </div>
-        <div class="user-box">
+        <div className="user-box">
             <input
             type='password'
             name='password'
