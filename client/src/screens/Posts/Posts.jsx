@@ -8,8 +8,17 @@ return (
         <div className="card-list">
             {allPosts.map(post => (
                 <Link to={`/posts/${post.id}`}>
-                <img src={post.thumbnail} />
-
+                <img className="image" src={post.thumbnail} />
+                <div className="hover-cards">
+                    <span className="text">
+                        <h3 className="card-title">{post.title}</h3>
+                        <div className="row">
+                            <div className="col">
+                            <h3>{post.author}</h3>
+                            </div>
+                        </div>
+                    </span>
+                </div>
                 </Link> 
             ))}
             <Link to="/posts/new"><button>create a post</button></Link>
@@ -20,16 +29,3 @@ return (
 
 )
 }
-<div className="hover-cards">
-                                        <span className="text">
-                                          <h3 className="card-title">{card.title}</h3>
-                                          <div className="row">
-                                              <div className="col">
-                                                <img className="eth" src={eth} alt="eth"/>
-                                              </div>
-                                              <div className="col">
-                                                <h3>{card.price}</h3>
-                                              </div>
-                                          </div>
-                                        </span>
-                                      </div>
