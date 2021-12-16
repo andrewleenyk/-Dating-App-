@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function PostEdit({ updatePost, allPosts}) {
   const [formData, setFormData] = useState({
@@ -79,17 +80,17 @@ export default function PostEdit({ updatePost, allPosts}) {
     Body:
     </label>
     </div>
-    
-    <a onClick={(e) => {
+
+    <Link to='/posts' onClick={(e) => {
     e.preventDefault()
     updatePost(id, formData);
     }}>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     Create
-    </a>
+    </Link>
     </form>
     </div>
   )

@@ -14,7 +14,7 @@ export default function Layout({ currentUser, handleLogout, children }) {
       <br/>
       {children}
       
-      <Footer />
+      <Footer id="footer" />
     </div>
   );
 }

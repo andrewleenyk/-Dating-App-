@@ -1,23 +1,20 @@
-#input:-webkit-autofill,
-#input:-webkit-autofill:focus {
+.input-nav:-webkit-autofill,
+.input-nav:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
 
 
   .login-box {
-    position: absolute;
-    top: 80%;
-    left: 50%;
+
     width: 400px;
     padding: 40px;
-    transform: translate(-50%, -50%);
     background: rgba(145, 145, 145, 0.212);
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
     height: fit-content;
+    margin: auto;
   }
   #register-box {
-    margin-top: 255px;
+
   }
   
   .login-box h2 {
@@ -31,7 +28,7 @@
     position: relative;
   }
   
-  .login-box .user-box #input {
+  .login-box .user-box .input-nav {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
@@ -59,8 +56,8 @@
     transition: .5s;
   }
   
-  .login-box .user-box #input:focus ~ #login-label,
-  .login-box .user-box #input:valid ~ #login-label {
+  .login-box .user-box .input-nav:focus ~ #login-label,
+  .login-box .user-box .input-nav:valid ~ #login-label {
     top: -20px;
     left: 0;
     color: #ffffff;

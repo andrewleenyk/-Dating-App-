@@ -1,7 +1,4 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
-
-
 .text-animation-box {
   background-size: cover;
   display: flex;
@@ -21,8 +18,9 @@
 }
 
 .text-animation-box {
-  margin: 0px 0px 0px 80px;
-  font-size: 64px;
+  margin: auto !important;
+  margin-top: 50px;
+  font-size: 5vw;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -33,10 +31,8 @@
   overflow: hidden;
 }
 .text-animation-box > div > p {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  white-space: nowrap;
+  white-space:pre-wrap;
+  width:auto auto !important;
   margin: 0;
   line-height: 117%;
 }

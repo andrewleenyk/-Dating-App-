@@ -72,6 +72,7 @@ function MainContainer({ currentUser }) {
         <Route path='/posts'>
             <Posts
             allPosts={allPosts}
+            currentUser={currentUser}
             />
         </Route>
         <Route path='/profile'>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { Link } from 'react-router-dom';
 
 export default function PostCreate({ createPost, currentUser }) {
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ export default function PostCreate({ createPost, currentUser }) {
     <h2 className="form-title">Create Node</h2>
     <form >
     
-    <div class="user-box">
+    <div className="user-box">
     
     <input
     id="input"
@@ -40,7 +40,7 @@ export default function PostCreate({ createPost, currentUser }) {
     </label>
     </div>
     
-    <div class="user-box">
+    <div className="user-box">
     <input
     id="input"
     type='text'
@@ -53,9 +53,9 @@ export default function PostCreate({ createPost, currentUser }) {
     </label>
     </div>
     
-    <div class="user-box">
+    <div className="user-box">
     <textarea 
-    id="input"
+    className="input-nav"
     type='text'
     name='body'
     rows="8"
@@ -67,7 +67,7 @@ export default function PostCreate({ createPost, currentUser }) {
     </label>
     </div>
     
-    <a onClick={(e) => {
+    <Link to="/posts" onClick={(e) => {
     e.preventDefault()
     createPost(formData)
     }}>
@@ -76,7 +76,7 @@ export default function PostCreate({ createPost, currentUser }) {
     <span></span>
     <span></span>
     Create
-    </a>
+    </Link>
     </form>
     </div>
   )

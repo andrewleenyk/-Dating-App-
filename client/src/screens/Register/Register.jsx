@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Register.css'
-
+import { Link } from 'react-router-dom';
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -26,10 +26,10 @@ export default function Register(props) {
           <h2 className="form-title">Register</h2>
     <form >
 
-    <div class="user-box">
+    <div className="user-box">
 
       <input
-      id="input"
+      className="input-nav"
       type='text'
       name='username'
       value={username}
@@ -40,9 +40,9 @@ export default function Register(props) {
       </label>
       </div>
 
-      <div class="user-box">
+      <div className="user-box">
       <input
-      id="input"
+      className="input-nav"
       type='text'
       name='email'
       value={email}
@@ -53,7 +53,7 @@ export default function Register(props) {
       </label>
       </div>
 
-      <div class="user-box">
+      <div className="user-box">
       <input
       type='password'
       name='password'
@@ -65,9 +65,9 @@ export default function Register(props) {
       </label>
       </div>
 
-      <div class="user-box">
+      <div className="user-box">
       <input
-      id="input"
+      className="input-nav"
       type='text'
       name='profile_pic'
       value={profile_pic}
@@ -78,9 +78,9 @@ export default function Register(props) {
       </label>
       </div>
 
-      <div class="user-box">
+      <div className="user-box">
       <textarea 
-      id="input"
+      className="input-nav"
       type='text'
       name='bio'
       rows="6"
@@ -92,7 +92,7 @@ export default function Register(props) {
       </label>
       </div>
 
-      <a onClick={(e)=> {
+      <Link to="/profile" onClick={(e)=> {
         e.preventDefault();
         handleRegister(formData);
         }}>
@@ -101,7 +101,7 @@ export default function Register(props) {
       <span></span>
       <span></span>
       Submit
-    </a>
+    </Link>
     </form>
     </div>
   );

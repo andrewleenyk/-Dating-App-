@@ -2,6 +2,7 @@
   text-align: center;
   /*background-image: linear-gradient(to right, rgb(0,81,219), rgb(71,191,165)); */
   background-color: black;
+  height: fit-content;
 }
 
 .App-header {
@@ -15,21 +16,74 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width: 830px) {
+
+  .card-div {
+    width: 250px !important;
+    height: 250px !important; 
+  }
+  .image{
+    width: 100% !important;
+    width: 250px !important;
+    height: 250px !important;
+    border-radius: 4px !important;
+    transition: all .3s ease !important;
+}
+.card-div:hover .hover-cards{
+  transition: 0.2s ease-in-out;
+  opacity: 1;
+  padding: 0px;
+
 }
 
-
-
-@media only screen and (max-width: 730px) {
-  body {
-    background-color: lightblue;
-  }
+.hover-cards {
+  position: absolute;
+  height: 100% !important;
+  width: 100% !important;
+  opacity: 0;
+  transition: .5s ease;
+  background: rgb(0, 0, 0)!important;
+  padding: 0;
+}
+.Nav-title {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 5rem !important;
+  margin: 0px;
+  color: white;
+  letter-spacing: 3px;
+}
+.profile-detail {
+  background-color: rgba(145, 145, 145, 0.212);
+  width: 75vw !important;
+}
 }
 
 
 @media only screen and (max-width: 380px) {
-  body {
-    background-color: lightblue;
+  .nav-menu li a {
+    width: 70px;
   }
+  .text-animation-box {
+    font-size: 6vw !important;
+  }
+  
+  
+}
+
+
+@media only screen and (max-width: 680px) {
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-left: 0px !important;
+  }
+  .nav-menu li a {
+    margin: 10px;
+  }
+
+  .login-box {
+    width: 300px !important;
+  }
+
+
 }

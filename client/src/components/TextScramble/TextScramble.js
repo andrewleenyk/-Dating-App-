@@ -62,7 +62,7 @@ class TextScramble {
   // ——————————————————————————————————————————————————
   // Example
   // ——————————————————————————————————————————————————
-  
+  /*
   const phrases1 = [
     "Neo,",
     "sooner or later",
@@ -82,17 +82,17 @@ class TextScramble {
     ", blockchain technology",
     ",and decentralized finance"
   ];
-  const phrases = [
-    "decentralization",
-    "web3",
-    "cryptocurrency",
-    "virtual reality",
-    "space",
-    "tokenization"
-  ];
-  const phrases4 = [
-    "decentralization"
-  ];
+
+*/
+const phrases = [
+  "decentralization",
+  "web3",
+  "cryptocurrency",
+  "virtual reality",
+  "space",
+  "tokenization"
+];
+
 
   const el = document.querySelector(".text");
   const fx = new TextScramble(el);
