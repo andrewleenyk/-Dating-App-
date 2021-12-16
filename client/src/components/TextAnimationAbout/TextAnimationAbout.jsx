@@ -1,4 +1,4 @@
-import './TextAnimationAbout.css';
+import '../TextAnimation/TextAnimation.css';
 export default function TextAnimationAbout() {
 
 return (
