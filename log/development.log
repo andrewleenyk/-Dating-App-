@@ -7459,3 +7459,24 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 1.7ms | Allocations: 1507)
 
 
+Started GET "/auth/verify" for ::1 at 2021-12-16 03:32:42 -0500
+Started GET "/posts" for ::1 at 2021-12-16 03:32:42 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationsController#verify as HTML
+Processing by PostsController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1290)
+
+
+  [1m[36mPost Load (46.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 355ms (Views: 28.8ms | ActiveRecord: 292.6ms | Allocations: 11048)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 03:32:51 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.9ms | Allocations: 1882)
+
+
