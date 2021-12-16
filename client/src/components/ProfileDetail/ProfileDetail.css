@@ -9,12 +9,9 @@
 h1 {
     color: white;
     font-weight:bolder;
-    font-family: 'Roboto Mono Bold', monospace;
+    font-family: 'Roboto Mono', monospace;
 }
-section {
-    background-color: cadetblue;
 
-}
 a {
     color: white;
     display: block;
