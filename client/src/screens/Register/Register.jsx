@@ -65,7 +65,7 @@ export default function Register(props) {
       </label>
       </div>
 
-      <div class="user-box">
+      <div className="user-box">
       <input
       id="input"
       type='text'
@@ -78,7 +78,7 @@ export default function Register(props) {
       </label>
       </div>
 
-      <div class="user-box">
+      <div className="user-box">
       <textarea 
       id="input"
       type='text'
