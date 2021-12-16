@@ -56,9 +56,13 @@
 
 
 @media only screen and (max-width: 380px) {
-  body {
-    background-color: lightblue;
+  .nav-menu li a {
+    width: 70px;
   }
+  .text-animation-box > div > p {
+    white-space: nowrap !important;
+  }
+
 }
 
 
@@ -69,7 +73,6 @@
   }
   .nav-menu li a {
     margin: 10px;
-    width: 70px;
   }
 
   .login-box {
