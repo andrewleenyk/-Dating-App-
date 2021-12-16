@@ -10,3 +10,39 @@
     flex-wrap: wrap;
 
 }
+
+.image{
+
+    width: 100%;
+    min-width: 334px;
+    min-height: 334px;
+    max-height: 334px;
+    border-radius: 4px;
+    transition: all .2s ease;
+}
+.image:hover{
+    transition: 0.2s ease-in-out;
+    width: 100%;
+    min-width: 360px;
+    min-height: 360px;
+    max-height: 360px;
+}
+.row{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h3{
+
+    font-family: 'Orbitron', sans-serif;
+    margin: 5px;
+}
+.card-title{
+
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 5px;
+    width: 300px;
+  }
