@@ -60,9 +60,12 @@
     width: 70px;
   }
   .text-animation-box > div > p {
-    white-space: nowrap !important;
+    white-space:pre-wrap;
+    width:auto !important;
   }
-
+  .text-animation-box {
+    margin: auto;
+  }
 }
 
 
