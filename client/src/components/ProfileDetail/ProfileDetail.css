@@ -1,0 +1,26 @@
+.profile-detail {
+    background-color: brown;
+    width: 450px;
+    align-self: center;
+    margin: auto;
+    padding: 30px;
+    color: white;
+}
+h1 {
+    color: white;
+    font-weight:bolder;
+    font-family: 'Roboto Mono Bold', monospace;
+}
+section {
+    background-color: cadetblue;
+
+}
+a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.profile-pic {
+    border-radius: 5px;
+}
