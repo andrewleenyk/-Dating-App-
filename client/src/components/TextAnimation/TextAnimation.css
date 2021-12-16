@@ -32,11 +32,7 @@
 }
 .text-animation-box > div > p {
   white-space:pre-wrap;
-  width:auto !important;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  white-space: nowrap;
+  width:auto auto !important;
   margin: 0;
   line-height: 117%;
 }
