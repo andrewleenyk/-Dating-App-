@@ -7,7 +7,7 @@ export default function Posts({ allPosts, currentUser}) {
 return (
         <div className="card-list">
             {allPosts.map(post => (
-                <Link to={`/posts/${post.id}`}>
+                <Link className="card-div" to={`/posts/${post.id}`}>
                 <img className="image" src={post.thumbnail} />
                 <div className="hover-cards">
                     <span className="text">
