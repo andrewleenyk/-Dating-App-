@@ -7480,3 +7480,220 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.9ms | Allocations: 1882)
 
 
+Started GET "/posts" for ::1 at 2021-12-16 03:39:20 -0500
+Started GET "/auth/verify" for ::1 at 2021-12-16 03:39:20 -0500
+Processing by PostsController#index as HTML
+Processing by AuthenticationsController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 31ms (Views: 1.9ms | Allocations: 563)
+
+
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 192ms (Views: 174.4ms | ActiveRecord: 15.7ms | Allocations: 5590)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 03:39:28 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (31.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 131ms (Views: 98.5ms | ActiveRecord: 31.5ms | Allocations: 1863)
+
+
+Started POST "/auth/login" for ::1 at 2021-12-16 03:40:41 -0500
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Johntheman", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Johntheman"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:6:in `login'
+Completed 200 OK in 701ms (Views: 0.6ms | ActiveRecord: 56.5ms | Allocations: 8460)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 03:40:42 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (10.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 56ms (Views: 16.4ms | ActiveRecord: 10.1ms | Allocations: 1864)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 03:41:17 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (4.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 4.2ms | Allocations: 1889)
+
+
+Started GET "/auth/verify" for ::1 at 2021-12-16 03:41:17 -0500
+Processing by AuthenticationsController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 957)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 03:50:25 -0500
+Started GET "/auth/verify" for ::1 at 2021-12-16 03:50:25 -0500
+Processing by PostsController#index as HTML
+Processing by AuthenticationsController#verify as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 143ms (Views: 2.0ms | ActiveRecord: 105.5ms | Allocations: 6760)
+
+
+  [1m[36mPost Load (32.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 196ms (Views: 191.4ms | ActiveRecord: 139.9ms | Allocations: 9211)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 03:50:27 -0500
+Processing by PostsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-12-16 03:50:27 -0500
+Processing by AuthenticationsController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 28ms (Views: 0.9ms | ActiveRecord: 0.6ms | Allocations: 860)
+
+
+  [1m[36mPost Load (6.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 50ms (Views: 40.4ms | ActiveRecord: 6.6ms | Allocations: 3535)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 03:52:21 -0500
+Processing by PostsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-12-16 03:52:21 -0500
+Processing by AuthenticationsController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 859)
+
+
+  [1m[36mPost Load (16.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 47ms (Views: 29.5ms | ActiveRecord: 16.9ms | Allocations: 3559)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 03:55:13 -0500
+Processing by PostsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-12-16 03:55:13 -0500
+Processing by AuthenticationsController#verify as HTML
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 55ms (Views: 1.1ms | ActiveRecord: 4.8ms | Allocations: 859)
+
+
+  [1m[36mPost Load (12.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 80ms (Views: 66.8ms | ActiveRecord: 12.9ms | Allocations: 3559)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 03:56:34 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 2.0ms | Allocations: 1862)
+
+
+Started GET "/auth/verify" for ::1 at 2021-12-16 03:56:34 -0500
+Processing by AuthenticationsController#verify as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 1.1ms | ActiveRecord: 1.9ms | Allocations: 882)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 03:56:57 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (3.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 53ms (Views: 48.9ms | ActiveRecord: 3.5ms | Allocations: 1862)
+
+
+Started GET "/auth/verify" for ::1 at 2021-12-16 03:56:57 -0500
+Processing by AuthenticationsController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 0.9ms | Allocations: 824)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 03:58:32 -0500
+Processing by PostsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-12-16 03:58:32 -0500
+Processing by AuthenticationsController#verify as HTML
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 1.7ms | Allocations: 2628)
+
+
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 25ms (Views: 1.1ms | ActiveRecord: 14.2ms | Allocations: 2835)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 03:59:58 -0500
+Processing by PostsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-12-16 03:59:58 -0500
+Processing by AuthenticationsController#verify as HTML
+  [1m[36mPost Load (4.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 30ms (Views: 25.2ms | ActiveRecord: 4.2ms | Allocations: 2638)
+
+
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 16ms (Views: 1.1ms | ActiveRecord: 8.4ms | Allocations: 2799)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 04:00:57 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 1.4ms | Allocations: 1862)
+
+
+Started GET "/auth/verify" for ::1 at 2021-12-16 04:00:57 -0500
+Processing by AuthenticationsController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 824)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 04:02:25 -0500
+Processing by PostsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-12-16 04:02:25 -0500
+Processing by AuthenticationsController#verify as HTML
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 23ms (Views: 1.1ms | ActiveRecord: 6.2ms | Allocations: 859)
+
+
+  [1m[36mPost Load (31.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 63ms (Views: 31.1ms | ActiveRecord: 31.5ms | Allocations: 3541)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 04:02:48 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.9ms | Allocations: 1862)
+
+
+Started GET "/auth/verify" for ::1 at 2021-12-16 04:02:48 -0500
+Processing by AuthenticationsController#verify as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 1.0ms | Allocations: 824)
+
+
+Started GET "/posts" for ::1 at 2021-12-16 04:10:08 -0500
+Processing by PostsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-12-16 04:10:08 -0500
+Processing by AuthenticationsController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 127ms (Views: 0.6ms | ActiveRecord: 15.2ms | Allocations: 4473)
+
+
+  [1m[36mPost Load (3.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9:in `index'
+Completed 200 OK in 152ms (Views: 151.1ms | ActiveRecord: 29.1ms | Allocations: 9606)
+
+

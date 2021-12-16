@@ -11,11 +11,18 @@ return (
             <h3 className="bio">{currentUser.bio}</h3>
             <h1>Nodes: </h1>
             <div className="profile-nodes">
-                    {allPosts.map(post => {
-                        if (post.user_id === currentUser?.id) {
-                            return <Link className="profile-nodes" key={`profile-${post.id}`} to={`/posts/${post.id}`}>{post.title}</Link>
-                        }
-                    })}
+                    {/*
+                                {allPosts.map(post => (
+                                            <div>
+                                            {post.user_id === currentUser?.id ? (<Link className="profile-nodes" key={`profile-${post.title}dsss`} to={`/posts/${post.id}`}>{post.title}</Link>) : ( <></> )}
+                                            </div>
+                                        ))}
+                    */}
+                    {
+                        allPosts.filter(post=>post.user_id === currentUser?.id).map(post=> (
+                            <Link className="profile-nodes" key={`${post.title}`} to={`/posts/${post.id}`}>{post.title}</Link>
+                            ))
+                    }
                     </div>
 
         </div>
