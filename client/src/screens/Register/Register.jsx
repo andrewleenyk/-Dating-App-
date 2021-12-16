@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Register.css'
-
+import { Link } from 'react-router-dom';
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -92,7 +92,7 @@ export default function Register(props) {
       </label>
       </div>
 
-      <a onClick={(e)=> {
+      <Link onClick={(e)=> {
         e.preventDefault();
         handleRegister(formData);
         }}>
@@ -101,7 +101,7 @@ export default function Register(props) {
       <span></span>
       <span></span>
       Submit
-    </a>
+    </Link>
     </form>
     </div>
   );
